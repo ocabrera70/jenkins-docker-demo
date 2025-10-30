@@ -1,0 +1,88 @@
+###############################################
+# CORE & ESSENTIAL PLUGINS
+###############################################
+# Enables Jenkins to interact with Git repositories
+git
+# Provides the main pipeline (Declarative + Scripted) features
+workflow-aggregator
+pipeline-model-definition
+pipeline-stage-view
+# Secure credentials handling and binding
+credentials-binding
+# Stores and manages credentials
+credentials
+# Allows SSH key usage in builds
+ssh-agent
+# For cleaning up workspaces before/after builds
+ws-cleanup
+# Adds timestamps to console logs
+timestamper
+# Enables ANSI colors in console output
+ansicolor
+
+
+###############################################
+# SOURCE CONTROL MANAGEMENT (SCM) INTEGRATIONS
+###############################################
+# GitHub integration: webhooks, statuses, etc.
+github
+# GitLab integration: triggers, pipelines, etc.
+gitlab-plugin
+
+
+###############################################
+# PIPELINE & AUTOMATION
+###############################################
+# Job DSL for creating jobs programmatically (Groovy)
+job-dsl
+# Configuration as Code (JCasC) for YAML-based Jenkins config
+configuration-as-code
+# Docker support inside pipelines
+docker-workflow
+# Kubernetes plugin for dynamic agent provisioning
+kubernetes
+# Adds Terraform CLI integration support
+terraform
+# Adds Ansible integration to execute playbooks
+ansible
+# Rebuild button to rerun previous builds easily
+rebuild
+# Allows Git branch/tag parameters in jobs
+git-parameter
+# Controls concurrent build executions
+throttle-concurrents
+# Aborts builds exceeding specified time
+build-timeout
+
+
+###############################################
+# SECURITY & ACCESS CONTROL
+###############################################
+# Basic matrix-based security
+matrix-auth
+# Role-based access control (fine-grained permissions)
+role-strategy
+# Node iterator API (dependency for agents/pipeline)
+node-iterator-api
+
+
+###############################################
+# NOTIFICATIONS & REPORTING
+###############################################
+# Extended email notifications
+email-ext
+# Slack notifications for build events
+slack
+# Jira integration for issue updates
+jira
+# SonarQube integration for static code analysis
+sonar
+
+
+###############################################
+# MONITORING & METRICS
+###############################################
+# Exposes Jenkins metrics to Prometheus
+prometheus
+# Provides Jenkins performance and health metrics
+metrics
