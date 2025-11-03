@@ -86,3 +86,5 @@ sonar
 prometheus
 # Provides Jenkins performance and health metrics
 metrics
+# Disk usage
+cloudbees-disk-usage-simple
