@@ -1,0 +1,23 @@
+services:
+  jenkins: # Define the Jenkins service
+    build: 
+      context: . # Build the image from the current directory (where the Dockerfile is located)        
+      dockerfile: Dockerfile # Specify the Dockerfile to use for building the image
+      args:
+        JAVA_OPTS: '-Xms1g -Xmx3g -XX:+UseG1GC' # Pass JAVA_OPTS build argument to Dockerfile
+    image: jenkins-custom:latest # Name the built image as jenkins-custom:latest
+    container_name: jenkins-custom # Set a custom container name
+    ports:
+      - "8080:8080" # Map port 8080 on the host to port 8080 in the container
+    volumes:
+      - ./jenkins_data:/var/jenkins_home # Mount the current directory as /var/jenkins_home inside the container
+    
+    mem_limit: 4g       # limit container memory to 4 GB
+    cpus: 2.0           # limit container to 2 vCPUs
+    restart: unless-stopped
+    environment:      
+      - JENKINS_URL=http://localhost:8080/ # Set the Jenkins URL environment variable
+      - ADMIN_PASSWORD=admin123            # Set the admin password environment variable
+      - DEVELOPER_PASS=devpass123          # Set the developer password environment variable
+      - DB_USERNAME=dbuser                 # Set the database username environment variable
+      - DB_PASSWORD=dbpass123              # Set the database password environment variable
