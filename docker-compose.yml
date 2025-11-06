@@ -19,3 +19,5 @@ services:
       - JENKINS_URL=http://localhost:8080/ # Set the Jenkins URL environment variable
       - ADMIN_PASSWORD=admin123            # Set the admin password environment variable
       - DEVELOPER_PASS=devpass123          # Set the developer password environment variable
+      - DB_USERNAME=dbuser                 # Set the database username environment variable
+      - DB_PASSWORD=dbpass123              # Set the database password environment variable
