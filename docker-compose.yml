@@ -9,8 +9,10 @@ services:
     container_name: jenkins-custom # Set a custom container name
     ports:
       - "8080:8080" # Map port 8080 on the host to port 8080 in the container
-    volumes:
-      - ./jenkins_data:/var/jenkins_home # Mount the current directory as /var/jenkins_home inside the container
+    
+    # Optionally, you can uncomment the following lines to persist Jenkins data
+    # volumes:
+    #   - ./jenkins_data:/var/jenkins_home # Mount the current directory as /var/jenkins_home inside the container
     
     mem_limit: 4g       # limit container memory to 4 GB
     cpus: 2.0           # limit container to 2 vCPUs
