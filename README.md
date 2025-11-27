@@ -160,8 +160,13 @@ ports:
 volumes:
   - ./jenkins_data:/var/jenkins_home
 ```
+
 - Mounts `jenkins_data/` folder to persist Jenkins data (jobs, builds, configurations)
 - Ensures data survives container restarts
+
+if you want to use persistent storage:
+- Create the `jenkins_data` directory. Run `mkdir jenkins_data` with your current user.
+- Uncomment this section in your `docker-compose.yml`
 
 ### Resource Limits
 ```yaml
